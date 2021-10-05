@@ -106,3 +106,80 @@ const add = (a, b) => a + b;
  const add = (a, b) => {
    return  a + b;
  }
+
+
+ //Currying
+//  const myltiply = (a, b) => a * b;
+//  const curriedMultiply = (a) => (b) => a * b;
+//  const myltiplyBy5 = curriedMyltiply(5);
+
+
+// compose
+// const compose = (f,g) => (a) => f(g(a));
+
+
+
+//Avoiding Side Effects, functional purity.
+// var a =1;
+// function b(){
+//     a=2;
+// }
+
+
+//Advanced Arrays
+
+const array = [1, 2, 3, 4];
+
+const double = []
+const newArray = array.forEach((num) => {
+    double.push(num * 2);
+})
+console.log(double);
+
+
+
+//map, filter, reduce
+const mapArray = array.map((num)=>{
+    return num * 2;
+})
+console.log(mapArray);
+
+const array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
+
+
+
+//array filter
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
+
+
+
+//array.includes()
+const array1 = [1, 2, 3];
+console.log(array1.includes(2));//true
+
+const pets = ['cat', 'dog', 'bat']
+console.log(pets.includes('cat'));//true
+
+
+//array.keys()
+const array1 = ['a', 'b', 'c'];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// expected output: 0
+// expected output: 1
+// expected output: 2

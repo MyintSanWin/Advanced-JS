@@ -197,3 +197,16 @@ console.log(array1.reduce(reducer));
 // 5 + 1 + 2 + 3 + 4
 console.log(array1.reduce(reducer, 5));
 // expected output: 15
+
+
+//array.values()
+const array1 = ['a', 'b', 'c'];
+const iterator = array1.values();
+
+for (const value of iterator) {
+  console.log(value);
+}
+
+// expected output: "a"
+// expected output: "b"
+// expected output: "c"

@@ -144,8 +144,8 @@ const mapArray = array.map((num)=>{
 })
 console.log(mapArray);
 
-const array1 = [1, 4, 9, 16];
 
+const array1 = [1, 4, 9, 16];
 // pass a function to map
 const map1 = array1.map(x => x * 2);
 
@@ -183,3 +183,17 @@ for (const key of iterator) {
 // expected output: 0
 // expected output: 1
 // expected output: 2
+
+
+
+//array.reduce()
+const array1 = [1, 2, 3, 4];
+const reducer = (previousValue, currentValue) => previousValue + currentValue;
+
+// 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer));
+// expected output: 10
+
+// 5 + 1 + 2 + 3 + 4
+console.log(array1.reduce(reducer, 5));
+// expected output: 15
